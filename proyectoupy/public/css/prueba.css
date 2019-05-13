@@ -1,0 +1,167 @@
+/* Diego Moreno - Cuerpo */
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica, Arial, sans-serif;
+	color: black;
+  background-color: #FAFAFA;
+	font-size: 1em;
+	line-height: 1.5em;
+	padding-top: 60px; /* Relleno superior igual a la altura de la cabecera*/
+}
+
+h1 {
+	font-size: 2.3em;
+	line-height: 1.3em;
+	margin: 15px 0;
+	text-align: center;
+	font-weight: 300;
+}
+
+p {
+	margin: 0 0 1.5em 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+body>section {
+	background: #FFFFFF;
+	width: 75%;
+	max-width: 1000px;
+	margin: 6% auto;
+	box-shadow: 0 0 10px rgba(0,0,0,.1);
+	padding-top: 4%;
+	padding-bottom: 4%;
+	padding: 4% 4%;
+}
+
+body>section h1{
+	font-size: 125%;
+	text-align: left;
+}
+
+body>section h1>span{
+	background-color:  rgb(34, 34, 34);
+	color: white;
+	padding: 4px 10px 4px 25px;
+	margin-left: -20px;
+	margin-bottom: 10px;
+}
+
+/* Diego Moreno - Cabecera y navegador */
+#main-header {
+	z-index: 2;
+	background: #28a735;
+	color: white;
+	height: 140px;
+	width: 100%;
+	left: 0;
+	top: 0;
+	position: fixed;
+}
+	#main-header a {
+		color: white;
+    text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+
+	}
+
+/*
+ * Logo
+ */
+#logo {
+	padding-top: 10px;
+	display: block;
+	text-align: center;
+	width: 100%;
+	height: 90px;
+	background: #333333;
+	float: center;
+	border-bottom: white groove 5px;
+}
+
+#logo-header {
+	display: block;
+	float: center;
+	text-decoration: none;
+	margin-left: 10px;
+}
+
+#imagen{
+	border-radius: 10px;
+}
+
+#logo-header img{
+	width: 44px;
+  height: 30px;
+}
+
+#logo-header .site-name {
+	display: block;
+	font-weight: 700;
+	font-size: 1.2em;
+}
+
+/*
+ * Navegación
+ */
+nav {
+	float: center;
+	text-align: center;;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	padding-right: 20px;
+}
+
+nav ul li {
+		display: inline-block;
+		line-height: 40px;
+}
+
+nav ul li a {
+	display: block;
+	padding: 0 10px;
+	text-decoration: none;
+}
+
+nav ul li a:hover {
+	background: #9a9a9a;
+}
+
+/* Diego Moreno - Pie de pagina */
+#main-footer {
+	background:  #333333;
+	color: white;
+	margin: -80px;
+	text-align: center;
+	padding: 4%;
+}
+
+#main-footer p {
+	margin: 0;
+}
+
+#main-footer a {
+	color: white;
+}
+.opcion_usuario{
+	position: relative;
+	float: left;
+	width: 33%;
+  text-align: center;
+}
+.opcion_usuario span{
+	background: red;
+}
+#opcion_usuario{
+  padding: 40px;
+  width: 90%;
+	text-align: left;
+	height: 100px;
+}

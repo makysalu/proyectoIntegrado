@@ -1,0 +1,313 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica, Arial, sans-serif;
+  background: url('../images/snow.jpg');
+  background-size: cover;
+	font-size: 1em;
+	line-height: 1.5em;
+
+	padding-top: 60px; /* Relleno superior igual a la altura de la cabecera*/
+}
+
+h1 {
+	font-size: 2.3em;
+	line-height: 1.3em;
+	margin: 15px 0;
+	text-align: center;
+	font-weight: 300;
+}
+
+p {
+	margin: 0 0 1.5em 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+body>section {
+	background: #FFFFFF;
+	width: 80%;
+	margin-left: 20%;
+	margin-top: -1%;
+	box-shadow: 0 0 10px rgba(0,0,0,.1);
+	padding-top: 4%;
+	padding-bottom: 4%;
+	padding: 4% 4%;
+}
+table,th,td{
+	border:none
+}
+
+table{
+	width:90%;
+	display:table;
+	border-collapse:collapse;
+	border-spacing:0
+}
+
+tr{
+	border-bottom:1px solid rgba(0,0,0,0.12)
+}
+td,th{
+	padding:15px 5px;
+	display:table-cell;
+	text-align:left;
+	vertical-align:middle;
+	border-radius:2px
+}
+#main-header {
+	z-index: 2;
+	background: #333333;
+	color: white;
+	height: 75px;
+
+	width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+	left: 0; /* Posicionamos la cabecera al lado izquierdo */
+	top: 0; /* Posicionamos la cabecera pegada arriba */
+	position: fixed; /* Hacemos que la cabecera tenga una posición fija */
+	border-bottom:  #28a735 groove 5px;
+}
+	#main-header a {
+		color: white;
+    text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+
+	}
+
+/*
+ * Logo
+ */
+#logo {
+	display: inline;
+	float: right;
+	margin-left: 25px;
+}
+#logo-header {
+	display: inline;
+	float: left;
+	text-decoration: none;
+	text-align: right;
+	margin: 10px;
+}
+	#logo-header:hover {
+		color: #28a735;
+	}
+	#imagen{
+		border-radius: 10px;
+		margin: 2px;
+		margin-right: 5px;
+	}
+	#logo-header img{
+		width: 44px;
+	  height: 30px;
+	}
+
+
+	#logo-header .site-name {
+		display: block;
+		font-weight: 700;
+		font-size: 1.2em;
+	}
+
+	#logo-header .site-desc {
+		display: block;
+		font-weight: 300;
+		font-size: 0.8em;
+		color: white;
+	}
+
+
+/*
+ * Navegación
+ */
+
+ nav ul li{
+	 -webkit-transition:background-color .3s;
+	 transition:background-color .3s;
+	 float:left;
+	 padding:0
+ }
+
+nav {
+	z-index: inherit;
+	position: fixed;
+	margin-top: 1%;
+	width: 20%;
+	height: 80%;
+	background-color: rgb(111, 112, 109);
+	border-right:  #28a735 groove 2px;
+	line-height:52px
+}
+	nav ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+
+	}
+
+		nav ul li {
+			display:inline;
+			width: 100%;
+			border-bottom:  #28a735 groove 3px;
+		}
+
+			nav ul li a {
+				color:#fff;
+				display: block;
+				padding: 0 20px;
+				text-decoration: none;
+			}
+
+				nav ul li a:hover {
+					background: #28a735;
+				}
+				nav ul ul{
+					width: 80%;
+					display: none;
+					list-style: none;
+					background: rgb(136, 136, 136);
+					position: absolute;
+					left: 50%;
+					top: 0;
+					padding: 0;
+					border:  #28a735 solid 1px;
+				}
+
+				nav ul ul li {
+					font-size: 14px;
+				}
+
+
+				nav ul li:hover > ul{
+					display: block;
+				}
+
+/*
+* pie de pagina*/
+
+#main-footer {
+	position: fixed;
+	width: 100%;
+	background: #333333;
+	color: white;
+	text-align: center;
+	padding: 20px;
+	margin-top: 0px;
+}
+	#main-footer p {
+		margin: 0;
+	}
+
+	#main-footer a {
+		color: white;
+	}
+
+	/* Diego Moreno - Registro y login */
+	.formulario {
+		height: 380px;
+		justify-content: left;
+		align-items: center;
+		text-align: left;
+	}
+
+
+	.formulario div{
+		color: black;
+		width: 45%;
+			font-family:serif;
+	}
+
+	.formulario div h2{
+		color: rgb(26, 134, 35);
+		text-shadow: 2px 0 0 #000,  -1px 1px 0 #000;
+		margin-bottom: 10%;
+
+		font-size: 45px;
+	}
+
+	.formulario label {
+		color: rgb(85, 88, 85);
+		font-size: 150%;
+	}
+
+	.formulario input{
+		border: none;
+		border-bottom: 2px solid green;
+	}
+
+	#botonregistro{
+		float: right;
+		border: 1px solid green;
+		border-radius: 25px;
+		padding: 5px 10px;
+	}
+
+	#botonregistro:hover{
+		background: green;
+		border: white;
+		color: white;
+	}
+
+
+	/*
+	* listado_usuario
+	*/
+	#listado_usuario {
+	    	height: 375px;
+	    }
+	#listado_usuario a {
+		text-decoration: none;
+		color: rgb(10, 69, 2);
+		font-size: 16px;
+	}
+	#listado_usuario a:hover {
+		color: rgb(32, 255, 34);
+	}
+
+
+	/* Perfil - Usuario */
+	.Perfil {
+		height: 375px;
+	}
+
+	.formulario_perfil div{
+		float: left;
+		display: inline;
+		width: 45%;
+		margin: 20px;
+		font-family:serif;
+	}
+
+	.Perfil div h2{
+		color: rgb(26, 134, 35);
+		text-shadow: 2px 0 0 #000,  -1px 1px 0 #000;
+		font-size: 32px;
+		margin-left: 240px;
+	}
+
+	.formulario_perfil label {
+		color: rgb(85, 88, 85);
+		font-size: 125%;
+	}
+
+	.formulario_perfil input{
+		border: none;
+		border-bottom: 2px solid green;
+	}
+
+	#update_perfil{
+		float: center;
+		border: 1px solid green;
+		border-radius: 25px;
+		padding: 5px 10px;
+		margin-top: 20px;
+		margin-left: 700px;
+	}
+
+	#update_perfil:hover{
+		background: green;
+		border: white;
+		color: white;
+	}
