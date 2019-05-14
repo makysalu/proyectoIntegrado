@@ -9,10 +9,10 @@
 </header>
 <nav>
   <ul>
-    <li><a href="listado_usuario.php">Usuarios</a>
+    <li><a href="">Usuarios</a>
       <ul>
-        <li><a href="informacion.php">Introducir Usuario</a></li>
-        <li><a href="informacion.php">Eliminar Usuario</a></li>
+        <li><a href="listado_usuario.php">Introducir Usuario</a></li>
+        <li><a href="deletuser.php">Eliminar Usuario</a></li>
       </ul>
     </li>
     <li><a href="informacion.php">Actualidad</a></li>
