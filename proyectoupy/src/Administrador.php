@@ -112,5 +112,11 @@ class Administrador extends BBDD {
     return $error;
   }
 
+  public function usuarios(){
+       $consulta="select u.* from usuario u";
+       $resultado=$this->conexion->query($consulta);
+       return $resultado;
+     }
+
 }
  ?>
