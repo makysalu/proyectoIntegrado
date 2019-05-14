@@ -71,7 +71,15 @@
            <div><label for="Fecha"><strong>Fecha de Nacimiento: </strong></label><input type="date" name="Fecha" value="<?php echo $_SESSION["user"]['fecha_nacimiento'] ?>" value placeholder=" Fecha" id="Fecha" ></div>
            <div><label for="ciudad"><strong>Ciudad: </strong></label><input type="text" name="Ciudad" value="<?php echo $_SESSION["user"]['ciudad'] ?>" value placeholder=" Ciudad" id="Ciudad" ></div>
            <div><label for="email"><strong>Email: </strong></label><input type="email" name="Email" value="<?php echo $_SESSION["user"]['email'] ?>" value placeholder=" Correo electrónico" id="Email" ></div><br></br>
-           <br></br>
+           <select class="" name="proyecto" id="proyecto" style="margin-left: 20px; margin-top: 10px;">
+            <option value='9'>Cuota Ordinaria: 9€/mes</option>
+            <option value='15'>Cuota Ordinaria Plus: 15€/mes</option>
+            <option value='25'>Cuota Contributiva: 25€/mes</option>
+            <option value='30'>Cuota Generosa: 30€/mes</option>
+            <option value='5'>Cuota Reducida: 5€/mes</option>
+            <option value='3'>Cuota Joven: 3€/mes</option>
+            <option value='1'>Cuota Simbolica: 1€/mes</option>
+           </select><br></br>
            <input id="update_perfil"  type="submit" value="Actualizar"></input>
          </form>
  		</div>
