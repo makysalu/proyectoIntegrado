@@ -270,7 +270,8 @@ public function actualizarPerfil($pos){
                             Apellidos='".$pos['Apellidos']."',
                             Fecha='".$pos['Fecha']."',
                             Ciudad='".$pos['Ciudad']."',
-                            Email='".$pos['Email']."'
+                            Email='".$pos['Email']."',
+                            Cuota='".$pos['Cuota']."'
                             where DNI='".$pos['DNI']."'");
 
   $resultado = $this->conexion->query("select u.*

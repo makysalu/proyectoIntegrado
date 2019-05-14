@@ -2,7 +2,7 @@
 session_start();
   require "./../src/BBDD.php";
   require "./../src/Administrador.php";
-  $a = new Usuario();
+  $a = new Administrador();
   $error=$a->comprobarCamposlogin($_POST);
   if (isset($error)) {
    if($error===false){
