@@ -1,5 +1,5 @@
 <?php
-class Usuario extends BBDD {
+class Administrador extends BBDD {
   public $accion;
   private $id_administrador;
   private $nombre;
