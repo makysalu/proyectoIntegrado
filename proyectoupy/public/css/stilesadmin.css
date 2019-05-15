@@ -311,3 +311,7 @@ nav {
 		border: white;
 		color: white;
 	}
+	
+	.eliminar_usuario{
+		height: 380px;
+	}

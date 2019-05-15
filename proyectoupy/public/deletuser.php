@@ -19,7 +19,7 @@
       <section class="eliminar_usuario">
         <h1>Eliminar Usuario</h1>
         <h3>Seleccionar Usuario</h3>
-        <form class="select_delet" action="deletuser.php" method="post" required>
+        <form class="select_delet" action="eliminar_usuario.php" method="post" required>
           <select class="User" name="User" id="User" style="margin-left: 20px; margin-top: 10px;">
             <?php
               foreach ($resultado as $usuario) {

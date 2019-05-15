@@ -118,5 +118,11 @@ class Administrador extends BBDD {
        return $resultado;
      }
 
+  public function deletuser($id_usuario){
+      $consulta="delete from `usuario`
+                 where usuario.ID_usuario='$id_usuario'";
+      $this->conexion->query($consulta);
+     }
+
 }
  ?>
