@@ -16,11 +16,11 @@ session_start();
                 $_SESSION["user"]['dni']=$u->getDNI();
                 $_SESSION["user"]['fecha_nacimiento']=$u->getFecha_Nacimiento();
                 $_SESSION["user"]['fecha_alta']=$u->getFecha_Alta();
-              //  $_SESSION["user"]['foto']=$u->setFoto;
+                $_SESSION["user"]['foto']=$u->getFoto();
                 $_SESSION["user"]['ciudad']=$u->getCiudad();
                 $_SESSION["user"]['email']=$u->getEmail();
                 $_SESSION["user"]['cuota']=$u->getCuota();
-              header("Location: http://localhost/web/programacion/evaluacion3/proyectoupy/public/perfil_usuario.php");
+              header("Location: perfil_usuario.php");
           }
      }
    }

@@ -17,7 +17,7 @@ session_start();
                 $_SESSION["admin"]['email']=$a->getEmail();
                 $_SESSION["admin"]['cuota']=$a->getContrasena();
 
-              header("Location: http://localhost/web/programacion/evaluacion3/proyectoupy/public/listado_usuario.php");
+              header("Location: listado_usuario.php");
           }
      }
    }

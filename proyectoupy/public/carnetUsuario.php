@@ -1,6 +1,6 @@
 <?php
 session_start();
-  if (!isset($_SESSION["user"])) header("Location: http://localhost/web/programacion/evaluacion3/proyectoupy/public/login.php");
+  if (!isset($_SESSION["user"])) header("Location: login.php");
  ?>
  <!DOCTYPE html>
  <html lang="en" dir="ltr">
@@ -42,7 +42,7 @@ session_start();
          </header>
          <div id="carnetderecha">
            <div id="fotocarnet">
-             <img src="images/fotocard.jpg" width="240" height="300"/>
+             <img src="<?php echo $_SESSION["user"]['foto']; ?>"/>
            </div>
          </div>
          <div id="carnetizquierda">

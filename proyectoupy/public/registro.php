@@ -8,8 +8,9 @@ if (isset($error)) {
    $error=$u->conexion();
    if ($error==false){
           $error=$u->insertarusuario($_POST);
+          $u->añadirFoto();
           if ($error==false){
-              header("Location: http://localhost/web/programacion/evaluacion3/proyectoupy/public/login.php");
+              header("Location: login.php");
           }
    }
  }
@@ -39,7 +40,7 @@ if (isset($_GET["msg"])){
           if($error!="") echo "<h4>ERROR:$error</h4>";
       }
       ?>
-        <form class="formularioregistro" action="registro.php" method="post" onsubmit="return comprobarRegistro()">
+        <form class="formularioregistro" action="registro.php" method="post" enctype="multipart/form-data" onsubmit="return comprobarRegistro()">
       <div class="registro">
           <h2>1- Datos Personales</h2>
           <label for="nombre"><strong>Nombre: </strong></label><br><input type="text" name="Nombre" value placeholder=" Nombre" id="Nombre" required><br></br>
@@ -63,6 +64,8 @@ if (isset($_GET["msg"])){
           <input type="radio" name="type" value="5" id="cuota5"> Cuota Reducida: 5€/mes si eres estudiante, en situacion de paro o jubilado.<br>
           <input type="radio" name="type" value="3" id="cuota3"> Cuota Joven: 3€/mes para menores de 23 años.<br>
           <input type="radio" name="type" value="1" id="cuota1"> Cuota Simbolica: 1€/mes para situaciones economicas especiales.<br>
+          <br></br>
+          <input name="uploadedfile" type="file" accept="image/png, .jpeg, .jpg, image/gif"/>
       </div>
       <div class="Enviobotonregistro">
         <h2>3- Aceptar Terminos</h2>
