@@ -54,7 +54,7 @@
 
  	<?php include "./assets/navegadoradmin.php"; ?>
 
- 	<script type="text/javascript" src="js/registro.js"></script>
+ 	<script type="text/javascript" src="js/js.js"></script>
 
  	<section class="Perfil">
  		<div>
@@ -64,13 +64,13 @@
            if($error!=""){echo "<h4>ERROR: $error</h4>";}
          }
        ?>
-         <form class="formulario_perfil" action="perfil.php" method="post" onsubmit="return comprobar()" required>
-           <div><label for="nombre"><strong>Nombre: </strong></label><input type="text" name="Nombre" value="<?php echo $_SESSION["user"]['nombre'] ?>" value placeholder=" Nombre" id="Nombre"></div>
-           <div><label for="apellidos"><strong>Apellidos: </strong></label><input type="text" name="Apellidos" value="<?php echo $_SESSION["user"]['apellidos'] ?>" value placeholder=" Apellidos" id="Apellidos" ></div>
+         <form class="formulario_perfil" action="perfil.php" method="post" onsubmit="return comprobarPerfil()">
+           <div><label for="nombre"><strong>Nombre: </strong></label><input type="text" name="Nombre" value="<?php echo $_SESSION["user"]['nombre'] ?>" value placeholder=" Nombre" id="Nombre" required></div>
+           <div><label for="apellidos"><strong>Apellidos: </strong></label><input type="text" name="Apellidos" value="<?php echo $_SESSION["user"]['apellidos'] ?>" value placeholder=" Apellidos" id="Apellidos" required></div>
            <div><label for="dni"><strong>DNI: </strong></label><input type="text" name="DNI" value="<?php echo $_SESSION["user"]['dni'] ?>" value placeholder=" DNI" id="DNI" required readonly></div>
-           <div><label for="Fecha"><strong>Fecha de Nacimiento: </strong></label><input type="date" name="Fecha" value="<?php echo $_SESSION["user"]['fecha_nacimiento'] ?>" value placeholder=" Fecha" id="Fecha" ></div>
-           <div><label for="ciudad"><strong>Ciudad: </strong></label><input type="text" name="Ciudad" value="<?php echo $_SESSION["user"]['ciudad'] ?>" value placeholder=" Ciudad" id="Ciudad" ></div>
-           <div><label for="email"><strong>Email: </strong></label><input type="email" name="Email" value="<?php echo $_SESSION["user"]['email'] ?>" value placeholder=" Correo electrónico" id="Email" ></div><br></br>
+           <div><label for="Fecha"><strong>Fecha de Nacimiento: </strong></label><input type="date" name="Fecha" value="<?php echo $_SESSION["user"]['fecha_nacimiento'] ?>" value placeholder=" Fecha" id="Fecha" required></div>
+           <div><label for="ciudad"><strong>Ciudad: </strong></label><input type="text" name="Ciudad" value="<?php echo $_SESSION["user"]['ciudad'] ?>" value placeholder=" Ciudad" id="Ciudad" required></div>
+           <div><label for="email"><strong>Email: </strong></label><input type="email" name="Email" value="<?php echo $_SESSION["user"]['email'] ?>" value placeholder=" Correo electrónico" id="Email" required></div><br></br>
            <select class="Cuota" name="Cuota" id="Cuota" style="margin-left: 20px; margin-top: 10px;">
             <option value='9'>Cuota Ordinaria: 9€/mes</option>
             <option value='15'>Cuota Ordinaria Plus: 15€/mes</option>

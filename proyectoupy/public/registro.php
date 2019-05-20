@@ -32,19 +32,19 @@ if (isset($_GET["msg"])){
 
 	<?php include "./assets/navegador.php"; ?>
 
-  <script type="text/javascript" src="js/registro.js"></script>
+  <script type="text/javascript" src="js/js.js"></script>
     <section>
       <?php
       if(isset($error)){
           if($error!="") echo "<h4>ERROR:$error</h4>";
       }
       ?>
-        <form class="formularioregistro" action="registro.php" method="post" onsubmit="return comprobar()">
+        <form class="formularioregistro" action="registro.php" method="post" onsubmit="return comprobarRegistro()">
       <div class="registro">
           <h2>1- Datos Personales</h2>
-          <label for="nombre"><strong>Nombre: </strong></label><br><input type="text" name="Nombre" value placeholder=" Nombre" id="Nombre" require><br></br>
+          <label for="nombre"><strong>Nombre: </strong></label><br><input type="text" name="Nombre" value placeholder=" Nombre" id="Nombre" required><br></br>
           <label for="nombre"><strong>Apellidos: </strong></label><br><input type="text" name="Apellidos" value placeholder=" Apellidos" id="Apellidos" required><br></br>
-          <label for="nombre"><strong>DNI: </strong></label><br><input type="text" name="DNI" value placeholder=" DNI" id="DNI" ><br></br>
+          <label for="nombre"><strong>DNI: </strong></label><br><input type="text" name="DNI" value placeholder=" DNI" id="DNI" required><br></br>
           <label for="fecha_nacimiento"><strong>Fecha de nacimiento: </strong><br></label><input type="date" name="Fecha_nacimiento" value placeholder="" id="Fecha_nacimiento" required><br></br>
           <label for="ciudad"><strong>Ciudad: </strong></label><br><input type="text" name="Ciudad" value placeholder=" Localidad" id="Ciudad" required><br></br>
           <label for="email"><strong>Email: </strong></label><br><input type="email" name="Email" value placeholder=" Correo electrónico" id="Email" required><br></br>

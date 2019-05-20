@@ -43,7 +43,7 @@ if (isset($_GET["msg"])){
 
 	<?php include "./assets/navegador.php"; ?>
 
-	<script type="text/javascript" src="js/registro.js"></script>
+	<script type="text/javascript" src="js/js.js"></script>
 
 	<section class="formulario">
 		<div>
@@ -53,9 +53,9 @@ if (isset($_GET["msg"])){
           if($error!=""){echo "<h4>ERROR: $error</h4>";}
         }
       ?>
-			<form class="formularioregistro" action="login.php" method="post" onsubmit="return comprobarlogin()" required>
+			<form class="formularioregistro" action="login.php" method="post" onsubmit="return comprobarLogin()">
 				<label for="DNI"><strong>DNI: </strong></label><input type="DNI" name="DNI" value placeholder=" DNI" id="DNI" required><br></br>
-				<label for="contrasena"><strong>Contraseña: </strong></label><input type="password" name="Contrasena" value placeholder=" Crear una contraseña" id="Contrasena"><br></br>
+				<label for="contrasena"><strong>Contraseña: </strong></label><input type="password" name="Contrasena" value placeholder=" Crear una contraseña" id="Contrasena" required><br></br>
 				<span>Si no Tienes una cuenta <a href="registro.php">Afiliate</a></span>
 				<input id="botonregistro" type="submit" value="Iniciar">
 			</form>

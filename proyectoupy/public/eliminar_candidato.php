@@ -5,7 +5,6 @@
     require "./../src/Administrador.php";
     $a = new Administrador();
     $a->conexion();
-    echo $_POST["User"];
-    $a->deletuser($_POST["User"]);
-    header("Location: http://localhost/web/programacion/evaluacion3/proyectoupy/public/deletuser.php")
+    $a->deletcandidato($_POST["Candidato"]);
+    header("Location: http://localhost/web/programacion/evaluacion3/proyectoupy/public/deletcandidato.php")
     ?>

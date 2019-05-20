@@ -40,7 +40,7 @@ if (isset($_GET["msg"])){
 
 	<?php include "./assets/navegadoradmin.php"; ?>
 
-	<script type="text/javascript" src="js/registro.js"></script>
+	<script type="text/javascript" src="js/js.js"></script>
 
 	<section class="formulario">
 		<div>
@@ -50,9 +50,9 @@ if (isset($_GET["msg"])){
           if($error!=""){echo "<h4>ERROR: $error</h4>";}
         }
       ?>
-			<form class="formularioregistro" action="login_admin.php" method="post" onsubmit="return comprobarlogin()" required>
+			<form class="formularioregistro" action="login_admin.php" method="post" onsubmit="return comprobarLogin()">
 				<label for="DNI"><strong>DNI: </strong></label><input type="DNI" name="DNI" value placeholder=" DNI" id="DNI" required><br></br>
-				<label for="contrasena"><strong>Contraseña: </strong></label><input type="password" name="Contrasena" value placeholder=" Crear una contraseña" id="Contrasena"><br></br>
+				<label for="contrasena"><strong>Contraseña: </strong></label><input type="password" name="Contrasena" value placeholder=" Crear una contraseña" id="Contrasena" required><br></br>
 				<input id="botonregistro" type="submit" value="Iniciar">
 			</form>
 		</div>
