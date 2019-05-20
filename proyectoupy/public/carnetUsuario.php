@@ -1,6 +1,6 @@
 <?php
 session_start();
-  if (!isset($_SESSION["user"])) header("Location: http://localhost/web/programacion/evaluacion3/proyectoupy/public/login.php");
+  if (!isset($_SESSION["user"])) header("Location:login.php");
  ?>
  <!DOCTYPE html>
  <html lang="en" dir="ltr">
