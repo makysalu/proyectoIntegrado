@@ -8,7 +8,8 @@
       <li><a href="index.php">Inicio</a></li>
       <li><a href="informacion.php">Información</a></li>
       <li><a href="financiacion.php">Transparencia</a></li>
-      <li><a href="foro.php">Actualidad</a></li>
+      <li><a href="foro.php">Foro</a></li>
+      <li><a href="noticias.php">Actualidad</a></li>
       <li><a href="contacto.php">Contactar</a></li>
       <li><a href="login.php">Afiliado</a>
         <ul>
