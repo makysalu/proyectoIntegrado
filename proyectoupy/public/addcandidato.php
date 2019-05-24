@@ -54,5 +54,6 @@
           <input id="addcandidato"  type="submit" value="Añadir"></input>
         </form>
       </section>
+      <?php include "./assets/piedepagina.php"; ?>
   </body>
 </html>

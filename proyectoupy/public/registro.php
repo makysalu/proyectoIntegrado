@@ -9,6 +9,7 @@ if (isset($error)) {
    $error=$u->conexion();
    if ($error==false){
           $error=$u->insertarusuario($_POST);
+          $u->añadirFoto();
           if ($error==false){
               header("Location:login.php");
           }
@@ -42,12 +43,12 @@ if (isset($_GET["msg"])){
           if($error!="") echo "<h4>ERROR:$error</h4>";
       }
       ?>
-        <form class="formularioregistro" action="registro.php" method="post" onsubmit="return comprobar()">
+        <form class="formularioregistro" action="registro.php" method="post" enctype="multipart/form-data" onsubmit="return comprobarRegistro()">
       <div class="registro">
           <h2>1- Datos Personales</h2>
-          <label for="nombre"><strong>Nombre: </strong></label><br><input type="text" name="Nombre" value placeholder=" Nombre" id="Nombre" require><br></br>
+          <label for="nombre"><strong>Nombre: </strong></label><br><input type="text" name="Nombre" value placeholder=" Nombre" id="Nombre" required><br></br>
           <label for="nombre"><strong>Apellidos: </strong></label><br><input type="text" name="Apellidos" value placeholder=" Apellidos" id="Apellidos" required><br></br>
-          <label for="nombre"><strong>DNI: </strong></label><br><input type="text" name="DNI" value placeholder=" DNI" id="DNI" ><br></br>
+          <label for="nombre"><strong>DNI: </strong></label><br><input type="text" name="DNI" value placeholder=" DNI" id="DNI" required><br></br>
           <label for="fecha_nacimiento"><strong>Fecha de nacimiento: </strong><br></label><input type="date" name="Fecha_nacimiento" value placeholder="" id="Fecha_nacimiento" required><br></br>
           <label for="ciudad"><strong>Ciudad: </strong></label><br><input type="text" name="Ciudad" value placeholder=" Localidad" id="Ciudad" required><br></br>
           <label for="email"><strong>Email: </strong></label><br><input type="email" name="Email" value placeholder=" Correo electrónico" id="Email" required><br></br>
@@ -66,6 +67,8 @@ if (isset($_GET["msg"])){
           <input type="radio" name="type" value="5" id="cuota5"> Cuota Reducida: 5€/mes si eres estudiante, en situacion de paro o jubilado.<br>
           <input type="radio" name="type" value="3" id="cuota3"> Cuota Joven: 3€/mes para menores de 23 años.<br>
           <input type="radio" name="type" value="1" id="cuota1"> Cuota Simbolica: 1€/mes para situaciones economicas especiales.<br>
+          <br></br>
+          <input name="uploadedfile" type="file" accept="image/png, .jpeg, .jpg, image/gif"/>
       </div>
       <div class="Enviobotonregistro">
         <h2>3- Aceptar Terminos</h2>

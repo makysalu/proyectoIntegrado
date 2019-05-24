@@ -208,5 +208,9 @@ class Administrador extends BBDD {
                                 where id_candidato='".$post['id_candidato']."'");
 
        }
+<<<<<<< HEAD
 }
+=======
+     }
+>>>>>>> 4c4e11198fedeb6d0aab894f17d4d9a54608d894
  ?>

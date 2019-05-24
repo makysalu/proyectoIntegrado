@@ -2,7 +2,6 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: Helvetica, Arial, sans-serif;
-  background: url('../images/snow.jpg');
   background-size: cover;
 	font-size: 1em;
 	line-height: 1.5em;
@@ -318,8 +317,38 @@ height: 40px
 	}
 
 	#update_perfil:hover{
+<<<<<<< HEAD
 		background: #494c92;
     border: #30305c;
     color: white;
 }
+=======
+		background: green;
+		border: white;
+		color: white;
+	}
+	/*Eliminar Usuario Diego Moreno Alfaro*/
+
+	.eliminar_usuario{
+		height: 380px;
+>>>>>>> 4c4e11198fedeb6d0aab894f17d4d9a54608d894
+	}
+
+	/*
+	* listado_candidatos
+	*/
+	#listado_candidatos {
+	    	height: 375px;
+	    }
+	#listado_candidatos a {
+		text-decoration: none;
+		color: rgb(10, 69, 2);
+		font-size: 16px;
+	}
+	#listado_candidatos a:hover {
+		color: rgb(32, 255, 34);
+	}
+
+	.añadir_usuario{
+		height: 380px;
 	}

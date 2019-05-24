@@ -10,6 +10,7 @@ class Usuario extends BBDD {
   private $ciudad;
   private $email;
   private $contrasena;
+  private $foto;
   private $cuota;
 
   function __construct()
@@ -24,6 +25,13 @@ class Usuario extends BBDD {
     return $this->id_afiliado;
   }
 
+  /* Foto */
+  function setFoto($foto){
+    $this->foto=$foto;
+  }
+  function getFoto(){
+    return $this->foto;
+  }
   /* Fecha_alta */
   function setFecha_Alta($fecha_alta){
     $this->fecha_alta=$fecha_alta;
@@ -230,8 +238,8 @@ class Usuario extends BBDD {
         $this->apellidos=$usuario['Apellidos'];
         $this->dni=$usuario['DNI'];
         $this->fecha_nacimiento=$usuario['Fecha'];
-        $this->fecha_alta=$usuario['Fecha_alta'];
-        //$this->foto=$usuario['Foto'];
+        $this->fecha_alta=$usuario['Fecha_Alta'];
+        $this->foto=$usuario['Foto'];
         $this->ciudad=$usuario['Ciudad'];
         $this->email=$usuario['Email'];
         $this->cuota=$usuario['Cuota'];
@@ -325,6 +333,17 @@ public function actualizarPerfil($pos){
       $this->email=$usuario['Email'];
       $this->cuota=$usuario['Cuota'];
     }
+  }
+
+  public function añadirFoto(){
+    $target_path = "uploads/";
+    $target_path = $target_path . basename( $_FILES['uploadedfile']['name']);
+      if(move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $target_path)) {
+        echo "El archivo ".  basename( $_FILES['uploadedfile']['name']).
+          " ha sido subido";
+        } else{
+          echo "Ha ocurrido un error, trate de nuevo!";
+}
   }
 /*  public function fichausuario(){
     $resultado2 = $this->conexion->query("select u.*

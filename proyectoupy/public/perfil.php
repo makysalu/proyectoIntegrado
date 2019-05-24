@@ -1,6 +1,6 @@
 <?php
   session_start();
-    if (!isset($_SESSION["admin"])) header("Location: http://localhost/web/programacion/evaluacion3/proyectoupy/public/login_admin.php");
+    if (!isset($_SESSION["admin"])) header("Location: login_admin.php");
 
     require "./../src/BBDD.php";
     require "./../src/Usuario.php";
@@ -54,7 +54,7 @@
 
  	<?php include "./assets/navegadoradmin.php"; ?>
 
- 	<script type="text/javascript" src="js/registro.js"></script>
+ 	<script type="text/javascript" src="js/js.js"></script>
 
  	<section class="Perfil">
  		<div>

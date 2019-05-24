@@ -16,7 +16,7 @@ session_start();
                 $_SESSION["user"]['dni']=$u->getDNI();
                 $_SESSION["user"]['fecha_nacimiento']=$u->getFecha_Nacimiento();
                 $_SESSION["user"]['fecha_alta']=$u->getFecha_Alta();
-              //  $_SESSION["user"]['foto']=$u->setFoto;
+                $_SESSION["user"]['foto']=$u->getFoto();
                 $_SESSION["user"]['ciudad']=$u->getCiudad();
                 $_SESSION["user"]['email']=$u->getEmail();
                 $_SESSION["user"]['cuota']=$u->getCuota();
@@ -71,7 +71,7 @@ if ($bind) {
           if($error!=""){echo "<h4>ERROR: $error</h4>";}
         }
       ?>
-			<form class="formularioregistro" action="login.php" method="post" onsubmit="return comprobarlogin()" required>
+			<form class="formularioregistro" action="login.php" method="post" onsubmit="return comprobarLogin()">
 				<label for="DNI"><strong>DNI: </strong></label><input type="DNI" name="DNI" value placeholder=" DNI" id="DNI" required><br></br>
 				<label for="contrasena"><strong>Contraseña: </strong></label><input type="password" name="Contrasena" value placeholder=" Crear una contraseña" id="Contrasena"><br></br>
 				<div id="registroAfiliad"><span>Si no Tienes una cuenta <a href="registro.php">Afiliate</a></span></div>
