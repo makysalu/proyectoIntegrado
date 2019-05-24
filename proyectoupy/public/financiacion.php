@@ -1,20 +1,23 @@
+<?php
+  session_start(); ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <!-- Fran - financiacion -->
     <link rel="stylesheet" href="css/stiles.css">
     <meta charset="utf-8">
-    <title>ULyC</title>
+    <title>Finaciación</title>
 
     </head>
   <body>
-    <?php include "./assets/navegador.php";?>
+    <div id="textoImagen">CUENTAS Y PRESUPUESTOS</div>
+                    <div><img id="sectionFlecha" src="./images/flecha.png"/></div>
+  <?php include "./assets/navegador.php"; ?>
+  <div class="colorCuentas"></div>
+  <div class="fondoCuentas"><img id="sectionImagen" src="./images/fondoCuentas.jpg"/></div>
     <section>
-      <header id="cabecerafianciacion">
-        CUENTAS Y PRESUPUESTOS
-      </header>
       <p id="cuerpofinanciacion">
-        Aquí encontrarás la información más relevante en el aspecto contable del PP; balances, cuenta de pérdidas y ganancias, memoria y desglose de ingresos y gastos.
+        Aquí encontrarás la información más relevante en el aspecto contable; balances, cuenta de pérdidas y ganancias, memoria y desglose de ingresos y gastos.
       </p>
     <center><a class="bottonfinanciacion" href="innovacion.php">Ver más</a></center>
   </section>
