@@ -99,7 +99,7 @@ class Usuario extends BBDD {
   // Diego Moreno -> Insertar Afiliado //
   public function comprobarCampos($pos){
     $error=null;
-    if (!isset($pos)||!isset($pos["Nombre"])||!isset($pos["Apellidos"])||!isset($pos["Fecha_nacimiento"])||!isset($pos["Ciudad"])||!isset($pos["Email"])||!isset($pos["Contrasena"])||!isset($pos["Contrasena2"])) {
+    if (!isset($pos)||!isset($pos["Nombre"])||!isset($pos["Apellidos"])||!isset($pos["Fecha"])||!isset($pos["Ciudad"])||!isset($pos["Email"])||!isset($pos["Contrasena"])||!isset($pos["Contrasena2"])) {
         $error = "";
       }elseif (!isset($pos["DNI"])){
         $error= "";
@@ -109,7 +109,7 @@ class Usuario extends BBDD {
         $error = "No has introducido ningún Apellidos.";
       }elseif ($pos["DNI"] == "") {
         $error = "No has introducido el DNI.";
-      }elseif ($pos["Fecha_nacimiento"] == "") {
+      }elseif ($pos["Fecha"] == "") {
         $error = "No has introducido la Fecha de nacimiento.";
       }elseif ($pos["Ciudad"] == "") {
         $error = "No has introducido ningún Ciudad.";
@@ -180,7 +180,7 @@ class Usuario extends BBDD {
     }
     else{
       $consulta="insert into usuario (Nombre, Apellidos, DNI, Fecha_alta, Fecha, Ciudad, Email, Contrasena, Cuota)
-                  values ('".$pos['Nombre']."', '".$pos['Apellidos']."','".$pos['DNI']."',now() ,'".$pos['Fecha_nacimiento']."', '".$pos['Ciudad']."', '".$pos['Email']."', '".$pos['Contrasena']."','.$this->cuota.')";
+                  values ('".$pos['Nombre']."', '".$pos['Apellidos']."','".$pos['DNI']."',now() ,'".$pos['Fecha']."', '".$pos['Ciudad']."', '".$pos['Email']."', '".$pos['Contrasena']."','.$this->cuota.')";
       $this->conexion->query($consulta);
       $error=false;
     }
@@ -263,7 +263,6 @@ public function comprobarPerfil($pos){
   }
   return $error;
 }
-
 public function actualizarPerfil($pos){
   $this->conexion->query("update usuario
                             set Nombre='".$pos['Nombre']."',
@@ -283,7 +282,7 @@ public function actualizarPerfil($pos){
     $this->apellidos=$usuario['Apellidos'];
     $this->dni=$usuario['DNI'];
     $this->fecha_nacimiento=$usuario['Fecha'];
-    $this->fecha_alta=$usuario['Fecha_alta'];
+    $this->fecha_alta=$usuario['Fecha_Alta'];
     //$this->foto=$usuario['Foto'];
     $this->ciudad=$usuario['Ciudad'];
     $this->email=$usuario['Email'];
@@ -320,7 +319,7 @@ public function actualizarPerfil($pos){
       $this->apellidos=$usuario['Apellidos'];
       $this->dni=$usuario['DNI'];
       $this->fecha_nacimiento=$usuario['Fecha'];
-      $this->fecha_alta=$usuario['Fecha_alta'];
+      $this->fecha_alta=$usuario['Fecha_Alta'];
       //$this->foto=$usuario['Foto'];
       $this->ciudad=$usuario['Ciudad'];
       $this->email=$usuario['Email'];
