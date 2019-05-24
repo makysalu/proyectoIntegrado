@@ -30,7 +30,7 @@ session_start();
 if (isset($_GET["msg"])){
   echo "<script>alert('".$_GET["msg"]."');</script>";
 }
-/*$adServer = "ldap://10.2.72.142";
+$adServer = "ldap://10.2.72.142";
 $ldap = ldap_connect($adServer);
 $username = 'Administrador';
 $password = '123cic3,T';
@@ -43,7 +43,7 @@ if ($bind) {
   $msg = "Estás logueado como correctamente al Active Directory";
 } else {
   $msg = "Usuario o contraseña incorrectos";
-}echo "<p id='mensajeActiveDirectory'>".$msg."</p>";*/
+}echo $msg;
  ?>
 
 <!DOCTYPE html>
