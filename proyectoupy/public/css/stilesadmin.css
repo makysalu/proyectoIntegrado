@@ -317,21 +317,10 @@ height: 40px
 	}
 
 	#update_perfil:hover{
-<<<<<<< HEAD
 		background: #494c92;
     border: #30305c;
     color: white;
 }
-=======
-		background: green;
-		border: white;
-		color: white;
-	}
-	/*Eliminar Usuario Diego Moreno Alfaro*/
-
-	.eliminar_usuario{
-		height: 380px;
->>>>>>> 4c4e11198fedeb6d0aab894f17d4d9a54608d894
 	}
 
 	/*

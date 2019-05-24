@@ -48,11 +48,7 @@ session_start();
          </header>
          <div id="carnetderecha">
            <div id="fotocarnet">
-<<<<<<< HEAD
              <img src="images/user.jpg" width="240" height="300"/>
-=======
-             <img src="<?php echo $_SESSION["user"]['foto']; ?>"/>
->>>>>>> 4c4e11198fedeb6d0aab894f17d4d9a54608d894
            </div>
          </div>
          <div id="carnetizquierda">
