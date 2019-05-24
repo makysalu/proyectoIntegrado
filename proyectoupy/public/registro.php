@@ -1,4 +1,5 @@
 <?php
+  session_start();
 require "./../src/BBDD.php";
 require "./../src/Usuario.php";
 $u = new Usuario();
@@ -9,7 +10,7 @@ if (isset($error)) {
    if ($error==false){
           $error=$u->insertarusuario($_POST);
           if ($error==false){
-              header("Location: http://localhost/web/programacion/evaluacion3/proyectoupy/public/login.php");
+              header("Location:login.php");
           }
    }
  }
@@ -24,14 +25,16 @@ if (isset($_GET["msg"])){
 <head>
   <!-- Diego Moreno - registro -->
 	<meta charset="utf-8">
-	<title>Cabecera fija</title>
+	<title>Registrarse</title>
 	<link rel="stylesheet" href="css/stiles.css">
 </head>
 
 <body>
-
+            <div id="textoImagen">Únete al cambio.</div>
 	<?php include "./assets/navegador.php"; ?>
 
+      <div class="colorAfiliate"></div>
+      <div class="fondoAfiliate"><img id="sectionImagen" src="./images/fondoAfiliarse.jpg"/></div>
   <script type="text/javascript" src="js/registro.js"></script>
     <section>
       <?php
