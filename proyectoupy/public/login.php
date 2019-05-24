@@ -20,8 +20,9 @@ session_start();
                 $_SESSION["user"]['ciudad']=$u->getCiudad();
                 $_SESSION["user"]['email']=$u->getEmail();
                 $_SESSION["user"]['cuota']=$u->getCuota();
-              header("Location: http://localhost/web/programacion/evaluacion3/proyectoupy/public/perfil_usuario.php");
+              header("Location: index.php");
           }
+
      }
    }
   }
@@ -29,23 +30,40 @@ session_start();
 if (isset($_GET["msg"])){
   echo "<script>alert('".$_GET["msg"]."');</script>";
 }
-?>
+/*$adServer = "ldap://10.2.72.142";
+$ldap = ldap_connect($adServer);
+$username = 'Administrador';
+$password = '123cic3,T';
+
+$ldaprdn = 'winsistemas' . "\\" . $username;
+ldap_set_option($ldap, LDAP_OPT_PROTOCOL_VERSION, 3);
+ldap_set_option($ldap, LDAP_OPT_REFERRALS, 0);
+$bind = @ldap_bind($ldap, $ldaprdn, $password);
+if ($bind) {
+  $msg = "Estás logueado como correctamente al Active Directory";
+} else {
+  $msg = "Usuario o contraseña incorrectos";
+}echo "<p id='mensajeActiveDirectory'>".$msg."</p>";*/
+ ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <!-- Diego Moreno - login -->
 	<meta charset="utf-8">
-	<title>Cabecera fija</title>
+	<title>Iniciar sesión</title>
 	<link rel="stylesheet" href="css/stiles.css">
 </head>
 
 <body>
 
-	<?php include "./assets/navegador.php"; ?>
-
+  <div id="textoImagen">Accede</div>
+  <?php include "./assets/navegador.php"; ?>
+  <div class="colorAcceder"></div>
+  <div class="fondoAcceder"><img id="sectionImagen" src="./images/fondoAcceder.jpg"/></div>
 	<script type="text/javascript" src="js/registro.js"></script>
 
-	<section class="formulario">
+	<div class="formulario">
 		<div>
 			<h2>Iniciar Afiliado</h2>
       <?php
@@ -56,13 +74,10 @@ if (isset($_GET["msg"])){
 			<form class="formularioregistro" action="login.php" method="post" onsubmit="return comprobarlogin()" required>
 				<label for="DNI"><strong>DNI: </strong></label><input type="DNI" name="DNI" value placeholder=" DNI" id="DNI" required><br></br>
 				<label for="contrasena"><strong>Contraseña: </strong></label><input type="password" name="Contrasena" value placeholder=" Crear una contraseña" id="Contrasena"><br></br>
-				<span>Si no Tienes una cuenta <a href="registro.php">Afiliate</a></span>
-				<input id="botonregistro" type="submit" value="Iniciar">
+				<div id="registroAfiliad"><span>Si no Tienes una cuenta <a href="registro.php">Afiliate</a></span></div>
+				<input type="submit" value="Iniciar" id="botonregistro">
 			</form>
 		</div>
-	</section>
-
-	<?php include "./assets/piedepagina.php"; ?>
-
+	</div>
 </body>
 </html>

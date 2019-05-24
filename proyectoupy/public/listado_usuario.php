@@ -1,18 +1,19 @@
 <?php
   session_start();
-    if (!isset($_SESSION["admin"])) header("Location: http://localhost/web/programacion/evaluacion3/proyectoupy/public/login_admin.php");
+    if (!isset($_SESSION["admin"])) header("Location:login_admin.php");
  ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Listado usarios</title>
     <link rel="stylesheet" href="./css/stilesadmin.css">
     <!-- carnetUsuario - Diego Moreno -->
   </head>
   <body>
     <?php include "./assets/navegadoradmin.php"; ?>
     <section id="listado_usuario">
+      <a href="eliminar_usuario.php"><p>Eliminar usuario</p></a>
       <table whidt='2000px' border='1'>
         <tr>
           <th>DNI</th>
@@ -33,6 +34,6 @@
        ?>
      </table>
     </section>
-    <?php include "./assets/piedepagina.php"; ?>
+
   </body>
 </html>

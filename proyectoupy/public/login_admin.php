@@ -2,7 +2,8 @@
 session_start();
   require "./../src/BBDD.php";
   require "./../src/Administrador.php";
-  $a = new Administrador();
+  if (isset($_SESSION["admin"])) header("Location:listado_usuario.php");
+  $a = new administrador();
   $error=$a->comprobarCamposlogin($_POST);
   if (isset($error)) {
    if($error===false){
@@ -17,7 +18,7 @@ session_start();
                 $_SESSION["admin"]['email']=$a->getEmail();
                 $_SESSION["admin"]['cuota']=$a->getContrasena();
 
-              header("Location: http://localhost/web/programacion/evaluacion3/proyectoupy/public/listado_usuario.php");
+              header("Location: listado_usuario.php");
           }
      }
    }
@@ -32,7 +33,7 @@ if (isset($_GET["msg"])){
 <head>
   <!-- Diego Moreno - login -->
 	<meta charset="utf-8">
-	<title>Cabecera fija</title>
+	<title>Login admin</title>
 	<link rel="stylesheet" href="css/stilesadmin.css">
 </head>
 
@@ -58,7 +59,7 @@ if (isset($_GET["msg"])){
 		</div>
 	</section>
 
-	<?php include "./assets/piedepagina.php"; ?>
+
 
 </body>
 </html>
