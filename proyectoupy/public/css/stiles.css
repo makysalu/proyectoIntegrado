@@ -1168,6 +1168,7 @@ background: #3f455c;
 	border: black 5px double;
 }
 #nombreCandidato{
-	margin-top: 182px;
 	margin-bottom: -202px;
 	background: #10055a80;}
+#descripcionCandidato{margin-top: 184px;
+margin-bottom: 41px;}
