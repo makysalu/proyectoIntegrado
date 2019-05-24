@@ -1,36 +1,40 @@
 <?php session_start();
   require "./../src/BBDD.php";
-  require "./../src/Noticia.php";
-  $a = new Noticia();
+  require "./../src/noticias.php";
+  $a = new Noticias();
   $a->conexion();
-  $listaNoticias=$a->Noticias()
+  $listaNoticias=$a->mostrarNoticia();
    ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
 
-    <title>Inicio</title>
+    <title>Noticias</title>
     <link rel="stylesheet" href="css/stiles.css">
   </head>
   <body>
-    <?php include "./assets/navegador.php"; ?>
-    <section id="noticias">
-      <div class="tema">
-        <p>noticias</p>
-      <hr>
+    <div id="textoImagen">Conoce las noticias de la actualidad</div>
+                    <div><img id="sectionFlecha" src="./images/flecha.png"/></div>
+  <?php include "./assets/navegador.php"; ?>
+  <div class="colorContacto"></div>
+  <div class="fondoContacto"><img id="sectionImagen" src="./images/fondoContacto.jpg"/></div>
+  <div id="textoIndex">
+    <h1 id="tituloPagina">Noticias</h1>
+  </div>
+    <section id="noticiasActualidad">
       <?php  foreach ($listaNoticias as $noticia) {
 
-          echo "<div id='noticia'>";
-          echo "<a id='linkNoticia' href=".$noticia['url'].">".$noticia['titulo']."<br></a>";
-              echo "<a  href=".$noticia['url']." >"."<img src='images/".$noticia['imagen']."'"."width='200' height='200'/>"."<br></a>";
-              echo $noticia['descripcion']."<br>";
-              echo "<p id='public'>"."Fecha publicacion:".$noticia['fecha_publicacion']."<br>";
+          echo "<div id='noticias'>";
+          echo "<article class='actualidad'>"."<img id='imagenNoticia' src=./images/Noticias/".$noticia['Foto'].">"."</article>";
+          echo "<br>";
+          echo "<p id='tituloNoticia'><label>".$noticia['titulo']."</label></p>";
+          echo "<p id='descrpcionNoticiaIndex'><label>".utf8_decode($noticia['descripcion'])."</label></p>";
+          echo "</div>";
           echo "</div>";
 
       }
 ?>
-</div>
     </section>
   </body>
       <?php include "./assets/piedepagina.php"; ?>

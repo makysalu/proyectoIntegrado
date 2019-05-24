@@ -1,6 +1,6 @@
 <?php
   session_start();
-    if (!isset($_SESSION["user"])) header("Location: http://localhost/web/programacion/evaluacion3/proyectoupy/public/login.php");
+    if (!isset($_SESSION["user"])) header("Location:login.php");
   require "./../src/BBDD.php";
   require "./../src/Usuario.php";
   $u = new Usuario();
@@ -22,7 +22,7 @@
                 $_SESSION["user"]['email']=$u->getEmail();
                 $_SESSION["user"]['cuota']=$u->getCuota();
 
-              header("Location: http://localhost/web/programacion/evaluacion3/proyectoupy/public/perfil_usuario.php");
+              header("Location:perfil_usuario.php");
           }
      }
    }
@@ -33,12 +33,18 @@
  <html lang="en" dir="ltr">
    <head>
      <meta charset="utf-8">
-     <title></title>
+     <title>Perfil usuario</title>
      <link rel="stylesheet" href="./css/stiles.css">
    </head>
    <body>
-     <?php include "./assets/navegador.php"; ?>
-
+     <div id="textoImagen">Aquí podras ver y modificar tu perfil.</div>
+         <div><img id="sectionFlecha" src="./images/flecha.png"/></div>
+<?php include "./assets/navegador.php"; ?>
+<div class="fondoColor"></div>
+<div class="fondoPerfil"><img id="sectionImagen" src="./images/fondoPerfil.jpg"/></div>
+<div id="textoIndex">
+  <h1 id="tituloPagina">Perfil Afiliado</h1>
+</div>
      <section id="fichausuario">
        <?php
        if(isset($error)){

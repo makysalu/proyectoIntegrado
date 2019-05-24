@@ -46,7 +46,7 @@
  <head>
    <!-- Diego Moreno - login -->
  	<meta charset="utf-8">
- 	<title>Cabecera fija</title>
+ 	<title>Administrar perfil</title>
  	<link rel="stylesheet" href="css/stilesadmin.css">
  </head>
 
@@ -67,8 +67,8 @@
          <form class="formulario_perfil" action="perfil.php" method="post" onsubmit="return comprobar()" required>
            <div><label for="nombre"><strong>Nombre: </strong></label><input type="text" name="Nombre" value="<?php echo $_SESSION["user"]['nombre'] ?>" value placeholder=" Nombre" id="Nombre"></div>
            <div><label for="apellidos"><strong>Apellidos: </strong></label><input type="text" name="Apellidos" value="<?php echo $_SESSION["user"]['apellidos'] ?>" value placeholder=" Apellidos" id="Apellidos" ></div>
-           <div><label for="dni"><strong>DNI: </strong></label><input type="text" name="DNI" value="<?php echo $_SESSION["user"]['dni'] ?>" value placeholder=" DNI" id="DNI" required readonly></div>
-           <div><label for="Fecha"><strong>Fecha de Nacimiento: </strong></label><input type="date" name="Fecha" value="<?php echo $_SESSION["user"]['fecha_nacimiento'] ?>" value placeholder=" Fecha" id="Fecha" ></div>
+           <div><label for="dni"><strong>DNI: </strong></label><input type="text" name="DNI" value="<?php echo $_SESSION["user"]['dni'] ?>" value placeholder=" DNI" id="DNI" required></div>
+           <div><label for="Fecha"><strong>Fecha de Nacimiento: </strong></label><input type="date" name="Fecha" value="<?php echo $_SESSION["user"]['Fecha'] ?>" placeholder=" Fecha" id="Fecha" ></div>
            <div><label for="ciudad"><strong>Ciudad: </strong></label><input type="text" name="Ciudad" value="<?php echo $_SESSION["user"]['ciudad'] ?>" value placeholder=" Ciudad" id="Ciudad" ></div>
            <div><label for="email"><strong>Email: </strong></label><input type="email" name="Email" value="<?php echo $_SESSION["user"]['email'] ?>" value placeholder=" Correo electrónico" id="Email" ></div><br></br>
            <select class="Cuota" name="Cuota" id="Cuota" style="margin-left: 20px; margin-top: 10px;">
@@ -84,8 +84,6 @@
          </form>
  		</div>
  	</section>
-
- 	<?php include "./assets/piedepagina.php"; ?>
 
  </body>
  </html>
