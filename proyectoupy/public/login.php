@@ -3,7 +3,6 @@ session_start();
   require "./../src/BBDD.php";
   require "./../src/Usuario.php";
   $u = new Usuario();
-echo $_FILES['Foto'];
   $error=$u->comprobarCamposlogin($_POST);
   if (isset($error)) {
    if($error===false){
@@ -40,9 +39,9 @@ ldap_set_option($ldap, LDAP_OPT_PROTOCOL_VERSION, 3);
 ldap_set_option($ldap, LDAP_OPT_REFERRALS, 0);
 $bind = @ldap_bind($ldap, $ldaprdn, $password);
 if ($bind) {
-  $msg = "Estás logueado como correctamente al Active Directory";
+  $msg = "Estás logueado correctamente a Active Directory";
 } else {
-  $msg = "Usuario o contraseña incorrectos";
+  $msg = "Conectado a Active Directory: Usuario o contraseña incorrectos";
 }echo $msg;
  ?>
 

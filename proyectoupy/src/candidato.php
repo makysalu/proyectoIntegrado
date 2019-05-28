@@ -19,13 +19,10 @@ class candidato extends BBDD
       $error="No has introducido el imagen";
     }elseif($post["id_usuario"]==""){
       $error="No has introducido la nombre";
-    }elseif($post["descripcion"]==""){
-      $error="No has introducido la apellido";
     }else{
       $error=false;
       $this->titulo=$post["id_candidato"];
       $this->descripcion=$post["id_usuario"];
-      $this->url=$post["descripcion"];
     }
       return $error;
   }
@@ -36,8 +33,8 @@ class candidato extends BBDD
   }
   public function insertarCandidatos()
   {
-    $insertar="INSERT INTO Candidatos (id_candidato, id_usuario, descripcion)
-    VALUES ('$this->id_candidato', '$this->id_usuario', '$this->descripcion')";
+    $insertar="INSERT INTO Candidatos (id_candidato, id_usuario)
+    VALUES ('$this->id_candidato', '$this->id_usuario')";
     $this->conexion->query($insertar);
   }
 

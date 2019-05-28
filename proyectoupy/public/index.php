@@ -1,7 +1,7 @@
 <?php
   session_start();
   require "./../src/BBDD.php";
-  require "./../src/noticias.php";
+  require "./../src/Noticias.php";
   $u = new Noticias();
   $u->conexion();
   $listarUltimasNoticias=$u->mostrarUltimasNoticias();
