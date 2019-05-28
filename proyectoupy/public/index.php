@@ -35,7 +35,6 @@ echo "<br>";
 echo "<p id='tituloNoticia'><label>".$ultimasNoticias['titulo']."</label></p>";
 echo "<p id='descrpcionNoticiaIndex'><label>".utf8_decode($ultimasNoticias['descripcion'])."</label></p>";
 echo "</div>";
-
 } ?>
 
     </section>

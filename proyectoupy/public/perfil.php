@@ -11,15 +11,15 @@
         $dni=$_GET['DNI'];
         $u->datosUsuario($dni);
           $_SESSION["user"]['Id_usuario']=$u->getId_Afiliado();
-          $_SESSION["user"]['nombre']=$u->getNombre();
-          $_SESSION["user"]['apellidos']=$u->getApellidos();
-          $_SESSION["user"]['dni']=$u->getDNI();
-          $_SESSION["user"]['fecha_nacimiento']=$u->getFecha_Nacimiento();
-          $_SESSION["user"]['fecha_alta']=$u->getFecha_Alta();
+          $_SESSION["user"]['Nombre']=$u->getNombre();
+          $_SESSION["user"]['Apellidos']=$u->getApellidos();
+          $_SESSION["user"]['DNI']=$u->getDNI();
+          $_SESSION["user"]['Fecha']=$u->getFecha();
+          $_SESSION["user"]['Fecha_Alta']=$u->getFecha_Alta();
         //  $_SESSION["user"]['foto']=$u->setFoto;
-          $_SESSION["user"]['ciudad']=$u->getCiudad();
-          $_SESSION["user"]['email']=$u->getEmail();
-          $_SESSION["user"]['cuota']=$u->getCuota();
+          $_SESSION["user"]['Ciudad']=$u->getCiudad();
+          $_SESSION["user"]['Email']=$u->getEmail();
+          $_SESSION["user"]['Cuota']=$u->getCuota();
       }
     $error=$u->comprobarPerfil($_POST);
     if (isset($error)) {
@@ -27,15 +27,15 @@
             $error=$u->actualizarPerfil($_POST);
             if ($error==false){
               $_SESSION["user"]['Id_usuario']=$u->getId_Afiliado();
-              $_SESSION["user"]['nombre']=$u->getNombre();
-              $_SESSION["user"]['apellidos']=$u->getApellidos();
-              $_SESSION["user"]['dni']=$u->getDNI();
-              $_SESSION["user"]['fecha_nacimiento']=$u->getFecha_Nacimiento();
-              $_SESSION["user"]['fecha_alta']=$u->getFecha_Alta();
+              $_SESSION["user"]['Nombre']=$u->getNombre();
+              $_SESSION["user"]['Apellidos']=$u->getApellidos();
+              $_SESSION["user"]['DNI']=$u->getDNI();
+              $_SESSION["user"]['Fecha']=$u->getFecha();
+              $_SESSION["user"]['Fecha_Alta']=$u->getFecha_Alta();
             //  $_SESSION["user"]['foto']=$u->setFoto;
-              $_SESSION["user"]['ciudad']=$u->getCiudad();
-              $_SESSION["user"]['email']=$u->getEmail();
-              $_SESSION["user"]['cuota']=$u->getCuota();
+              $_SESSION["user"]['Ciudad']=$u->getCiudad();
+              $_SESSION["user"]['Email']=$u->getEmail();
+              $_SESSION["user"]['Cuota']=$u->getCuota();
             }
           }
         }
@@ -58,20 +58,21 @@
 
  	<section class="Perfil">
  		<div>
- 			<h2>Perfil Afiliado <?php echo $_SESSION["user"]['nombre'] ?></h2>
+ 			<h2>Perfil Afiliado <?php echo $_SESSION["user"]['Nombre'] ?></h2>
        <?php
          if(isset($error)){
            if($error!=""){echo "<h4>ERROR: $error</h4>";}
          }
        ?>
          <form class="formulario_perfil" action="perfil.php" method="post" onsubmit="return comprobar()" required>
-           <div><label for="nombre"><strong>Nombre: </strong></label><input type="text" name="Nombre" value="<?php echo $_SESSION["user"]['nombre'] ?>" value placeholder=" Nombre" id="Nombre"></div>
-           <div><label for="apellidos"><strong>Apellidos: </strong></label><input type="text" name="Apellidos" value="<?php echo $_SESSION["user"]['apellidos'] ?>" value placeholder=" Apellidos" id="Apellidos" ></div>
-           <div><label for="dni"><strong>DNI: </strong></label><input type="text" name="DNI" value="<?php echo $_SESSION["user"]['dni'] ?>" value placeholder=" DNI" id="DNI" required></div>
+           <div><label for="nombre"><strong>Nombre: </strong></label><input type="text" name="Nombre" value="<?php echo $_SESSION["user"]['Nombre'] ?>" value placeholder=" Nombre" id="Nombre"></div>
+           <div><label for="apellidos"><strong>Apellidos: </strong></label><input type="text" name="Apellidos" value="<?php echo $_SESSION["user"]['Apellidos'] ?>" value placeholder=" Apellidos" id="Apellidos" ></div>
+           <div><label for="dni"><strong>DNI: </strong></label><input type="text" name="DNI" value="<?php echo $_SESSION["user"]['DNI'] ?>" value placeholder=" DNI" id="DNI" required></div>
            <div><label for="Fecha"><strong>Fecha de Nacimiento: </strong></label><input type="date" name="Fecha" value="<?php echo $_SESSION["user"]['Fecha'] ?>" placeholder=" Fecha" id="Fecha" ></div>
-           <div><label for="ciudad"><strong>Ciudad: </strong></label><input type="text" name="Ciudad" value="<?php echo $_SESSION["user"]['ciudad'] ?>" value placeholder=" Ciudad" id="Ciudad" ></div>
-           <div><label for="email"><strong>Email: </strong></label><input type="email" name="Email" value="<?php echo $_SESSION["user"]['email'] ?>" value placeholder=" Correo electrónico" id="Email" ></div><br></br>
+           <div><label for="ciudad"><strong>Ciudad: </strong></label><input type="text" name="Ciudad" value="<?php echo $_SESSION["user"]['Ciudad'] ?>" value placeholder=" Ciudad" id="Ciudad" ></div>
+           <div><label for="email"><strong>Email: </strong></label><input type="email" name="Email" value="<?php echo $_SESSION["user"]['Email'] ?>" value placeholder=" Correo electrónico" id="Email" ></div><br></br>
            <select class="Cuota" name="Cuota" id="Cuota" style="margin-left: 20px; margin-top: 10px;">
+             <option>Cuota Actual: <?php echo $_SESSION["user"]['Cuota'] ?>€/mes</option>
             <option value='9'>Cuota Ordinaria: 9€/mes</option>
             <option value='15'>Cuota Ordinaria Plus: 15€/mes</option>
             <option value='25'>Cuota Contributiva: 25€/mes</option>

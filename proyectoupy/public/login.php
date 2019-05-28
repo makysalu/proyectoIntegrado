@@ -3,6 +3,7 @@ session_start();
   require "./../src/BBDD.php";
   require "./../src/Usuario.php";
   $u = new Usuario();
+echo $_FILES['Foto'];
   $error=$u->comprobarCamposlogin($_POST);
   if (isset($error)) {
    if($error===false){
@@ -10,23 +11,22 @@ session_start();
      if ($error==false){
           $error=$u->loguear($_POST);
           if ($error==false){
-                $_SESSION["user"]['Id_usuario']=$u->getId_Afiliado();
-                $_SESSION["user"]['nombre']=$u->getNombre();
-                $_SESSION["user"]['apellidos']=$u->getApellidos();
-                $_SESSION["user"]['dni']=$u->getDNI();
-                $_SESSION["user"]['fecha_nacimiento']=$u->getFecha_Nacimiento();
-                $_SESSION["user"]['fecha_alta']=$u->getFecha_Alta();
-                $_SESSION["user"]['foto']=$u->getFoto();
-                $_SESSION["user"]['ciudad']=$u->getCiudad();
-                $_SESSION["user"]['email']=$u->getEmail();
-                $_SESSION["user"]['cuota']=$u->getCuota();
-              header("Location: index.php");
+            $_SESSION["user"]['ID_usuario']=$u->getId_Afiliado();
+            $_SESSION["user"]['Nombre']=$u->getNombre();
+            $_SESSION["user"]['Apellidos']=$u->getApellidos();
+            $_SESSION["user"]['DNI']=$u->getDNI();
+            $_SESSION["user"]['Fecha']=$u->getFecha();
+            $_SESSION["user"]['Fecha_Alta']=$u->getFecha_Alta();
+            $_SESSION["user"]['Foto']=$u->getFoto();
+            $_SESSION["user"]['Ciudad']=$u->getCiudad();
+            $_SESSION["user"]['Email']=$u->getEmail();
+            $_SESSION["user"]['Cuota']=$u->getCuota();
+header("Location:index.php");
           }
-
      }
+
    }
   }
-
 if (isset($_GET["msg"])){
   echo "<script>alert('".$_GET["msg"]."');</script>";
 }

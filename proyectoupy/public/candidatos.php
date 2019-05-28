@@ -29,7 +29,7 @@
       <?php  foreach ($listaCandidatos as $candidato) {
           echo "<div id='candidato'>";
           echo "<img id='imagenCandidato' src='images/".$candidato['Foto']."'"."width='200' height='200'/>"."<br></a>";
-echo "<div id='nombreCandidato'>".$candidato['Nombre']."</div><br>";
+echo "<div id='nombreCandidato'>".$candidato['Nombre']." ".$candidato['Apellidos']."</div><br>";
               echo "<p id='descripcionCandidato'>".$candidato['descripcion']."</p><br>";
           echo "</div>";
 

@@ -23,8 +23,8 @@
     <!-- porfavor respetar la sintasis de html5 section, article y aside -->
     <section id="content_inovacion">
       <div id="pepe">
-        <p>El 26 de junio de 2018 fueron presentadas las cuentas correspondientes al ejercicio 2017 ante el Tribunal de Cuentas. Previamente a su aprobación y remisión al Tribunal de Cuentas, las Cuentas del Partido Popular se someten al correspondiente informe de control interno de acuerdo al siguiente procedimiento.<br>
-        <a class="a-inovacion" HREF="informeTribunal.html" TARGET="_BLANK">VER INFORME</a></p>
+        <p>El 26 de junio de 2018 fueron presentadas las cuentas correspondientes al ejercicio 2017 ante el Tribunal de Cuentas. Previamente a su aprobación y remisión al Tribunal de Cuentas, las Cuentas se someten al correspondiente informe de control interno de acuerdo al siguiente procedimiento.<br>
+        <a class="a-inovacion" HREF="./media/procedimientodecontrolinterno.pdf" TARGET="_BLANK">VER INFORME</a></p>
         <p>
           <span>El último informe de fiscalización del Tribunal de Cuentas corresponde a los ejercicios 2014 y 2015 y se publica en el año 2017.</span>
       <ul>

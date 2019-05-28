@@ -55,7 +55,7 @@ tr{
 td,th{
 	padding:15px 5px;
 	display:table-cell;
-	text-align:left;
+	text-align:center;
 	vertical-align:middle;
 	border-radius:2px
 }
@@ -266,7 +266,8 @@ height: 40px
 	* listado_usuario
 	*/
 	#listado_usuario {
-	    	height: 375px;
+	    	display: inline-block;
+				min-height: 500px;
 	    }
 	#listado_usuario a {
 		text-decoration: none;
