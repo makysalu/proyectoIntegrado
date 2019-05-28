@@ -1,0 +1,3 @@
+CREATE DEFINER=`root`@`localhost` TRIGGER `movimientos_before_insert` BEFORE INSERT ON `movimientos` FOR EACH ROW BEGIN
+	update movimientos set movimientos.Total = (select Sum(movimientos.total) from movimientos) where movimientos.id_presupuesto = (select max(movimientos.id_presupuesto));
+END
