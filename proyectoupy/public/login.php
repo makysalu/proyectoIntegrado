@@ -10,26 +10,27 @@ session_start();
      if ($error==false){
           $error=$u->loguear($_POST);
           if ($error==false){
-            $_SESSION["user"]['ID_usuario']=$u->getId_Afiliado();
-            $_SESSION["user"]['Nombre']=$u->getNombre();
-            $_SESSION["user"]['Apellidos']=$u->getApellidos();
-            $_SESSION["user"]['DNI']=$u->getDNI();
-            $_SESSION["user"]['Fecha']=$u->getFecha();
-            $_SESSION["user"]['Fecha_Alta']=$u->getFecha_Alta();
-            $_SESSION["user"]['Foto']=$u->getFoto();
-            $_SESSION["user"]['Ciudad']=$u->getCiudad();
-            $_SESSION["user"]['Email']=$u->getEmail();
-            $_SESSION["user"]['Cuota']=$u->getCuota();
-header("Location:index.php");
+                $_SESSION["user"]['Id_usuario']=$u->getId_Afiliado();
+                $_SESSION["user"]['nombre']=$u->getNombre();
+                $_SESSION["user"]['apellidos']=$u->getApellidos();
+                $_SESSION["user"]['dni']=$u->getDNI();
+                $_SESSION["user"]['fecha_nacimiento']=$u->getFecha_Nacimiento();
+                $_SESSION["user"]['fecha_alta']=$u->getFecha_Alta();
+                $_SESSION["user"]['foto']=$u->getFoto();
+                $_SESSION["user"]['ciudad']=$u->getCiudad();
+                $_SESSION["user"]['email']=$u->getEmail();
+                $_SESSION["user"]['cuota']=$u->getCuota();
+              header("Location: index.php");
           }
-     }
 
+     }
    }
   }
+
 if (isset($_GET["msg"])){
   echo "<script>alert('".$_GET["msg"]."');</script>";
 }
-$adServer = "ldap://10.2.72.142";
+/*$adServer = "ldap://10.2.72.142";
 $ldap = ldap_connect($adServer);
 $username = 'Administrador';
 $password = '123cic3,T';
@@ -39,10 +40,10 @@ ldap_set_option($ldap, LDAP_OPT_PROTOCOL_VERSION, 3);
 ldap_set_option($ldap, LDAP_OPT_REFERRALS, 0);
 $bind = @ldap_bind($ldap, $ldaprdn, $password);
 if ($bind) {
-  $msg = "Estás logueado correctamente a Active Directory";
+  $msg = "Estás logueado como correctamente al Active Directory";
 } else {
-  $msg = "Conectado a Active Directory: Usuario o contraseña incorrectos";
-}echo $msg;
+  $msg = "Usuario o contraseña incorrectos";
+}echo $msg;*/
  ?>
 
 <!DOCTYPE html>
@@ -56,7 +57,7 @@ if ($bind) {
 
 <body>
 
-  <div id="textoImagen">Accede</div>
+  <!--<div id="textoImagen">Accede</div>-->
   <?php include "./assets/navegador.php"; ?>
   <div class="colorAcceder"></div>
   <div class="fondoAcceder"><img id="sectionImagen" src="./images/fondoAcceder.jpg"/></div>
@@ -78,5 +79,6 @@ if ($bind) {
 			</form>
 		</div>
 	</div>
+  <?php include "./assets/piedepagina.php"; ?>
 </body>
 </html>

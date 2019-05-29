@@ -72,8 +72,5 @@
          </form>
  		</div>
  	</section>
-
- 	<?php include "./assets/piedepagina.php"; ?>
-
  </body>
  </html>

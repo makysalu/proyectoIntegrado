@@ -83,7 +83,7 @@ body>section {
 	padding-bottom: 4%;
 	padding: 4% 4%;
 	display: inline-block;
-min-height: 486px;
+	min-height: 346px;
 }
 
 body>section h1{
@@ -540,17 +540,19 @@ min-height: 500px;
 		justify-content: center;
 		align-items: center;
 		text-align: center;
-		margin-top: 88px;}
+		margin-top: 100px;}
+
 #registroAfiliad{margin-left: 10px;}
 	.formulario div{
 		color: white;
 		background: #fff;
-		width: 81%;
-		padding: 1% 3%;
-		border-radius: 25px 0px 0px 25px;
-		margin-top: -923px;
+		width: 41%;
+		font-size: 22px;
+		padding: 3% 3%;
+		border-radius: 25px 25px 25px 25px;
+		margin-top: -723px;
 		z-index: 1;
-		margin-left: 642px;
+		/*margin-left: 642px;*/
 	}
 
 	.formulario div h2{
@@ -571,7 +573,7 @@ min-height: 500px;
 	.formulario div input{
 		position: relative;
     float: left;
-    margin-left: 1%;
+    margin-left: 21%;
     width: 42%;
     height: 20px;
     border-radius: 5px;
@@ -579,19 +581,18 @@ min-height: 500px;
 .formulario div input[type=submit]{
 	position: relative;
 	float: left;
-	margin-left: -6.66%;
+	margin-left: -1.66%;
 	width: 42%;
 	height: 20px;
 	border-radius: 3px;
 	margin-top: 20px;
 }
-#botonregistro{
+input	#botonregistro{
 	  text-align: center;
 	  margin-top: 5%;
 	  margin-left: 35%;
 	  width: 30%;
 	  height: 30px;
-		margin-top: 33px;
 	}
 
 	.formulario div span {
@@ -614,9 +615,8 @@ min-height: 500px;
 	.registro, .cuota {
 		position: relative;
 		float: left;
-		width: 40%;
-		background: rgba(225, 225, 226, 0.38);
 		width: 43%;
+		background: rgba(225, 225, 226, 0.38);
 		height: 650px;
 		padding: 2%;
 		font-size: 75%;
@@ -627,7 +627,7 @@ min-height: 500px;
 	}
 
 	.registro, .cuota, .Enviobotonregistro h2,h3{
-		color: #2d1246;
+		color: blue;
 	}
 
 	.registro{
@@ -892,7 +892,7 @@ margin-top: -247px;
 	margin-top: 85px;
 	padding: 0;
 	max-width: 1000px;
-	margin-left: 10%;
+	height: 400px;
 }
 #content_inovacion li{
 	list-style: none;
@@ -905,7 +905,7 @@ margin-top: -247px;
 }
 
 	.a-inovacion{
-		color: #2d1246;
+		color: #2a9628;
 		text-decoration: none;
 		}
 		#content_inovacion>li #link-innovacion:hover{
@@ -937,7 +937,6 @@ margin-top: -247px;
 #pepe{
 	margin-left: 20px;
 	margin-right: 20px;
-	margin-top: 28px;
 }
 
 /* pablo - foro */
@@ -952,7 +951,6 @@ margin-top: -247px;
 	max-height: 250px;
 	display: inline-block;
 	min-width: 100%;
-	margin-bottom: -144px;
 }
 #candidato{float: left;
 margin-left: 48px;}
@@ -984,11 +982,12 @@ margin-left: 48px;}
 #fichausuario, #menu_usuario{
 	width: 90%;
 	padding-bottom: 4%;
-	margin-top: 50px;
+	margin-top: 5%;
 	padding: 4%;
-	margin-left: 10%;
 	max-width: 1000px;
-	height: 800px;
+	height: 550px;
+	margin-left: 10%;
+	margin-bottom: 10%;
 }
 
 #cabecerausuario{
@@ -1012,7 +1011,6 @@ margin-left: 48px;}
   padding: 10px;
   width: 15%;
 	text-align: left;
-	margin-left: 282px;
 }
 
 .cabecerausuario>span{

@@ -1,9 +1,9 @@
 body {
 	margin: 0;
 	padding: 0;
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: serif;
   background-size: cover;
-	font-size: 1em;
+	font-size: 1.25em;
 	line-height: 1.5em;
 
 	padding-top: 60px; /* Relleno superior igual a la altura de la cabecera*/
@@ -33,7 +33,6 @@ body>section {
 	width: 80%;
 	margin-left: 20%;
 	margin-top: -1%;
-	box-shadow: 0 0 10px rgba(0,0,0,.1);
 	padding-top: 4%;
 	padding-bottom: 4%;
 	padding: 4% 4%;
@@ -55,7 +54,7 @@ tr{
 td,th{
 	padding:15px 5px;
 	display:table-cell;
-	text-align:center;
+	text-align:left;
 	vertical-align:middle;
 	border-radius:2px
 }
@@ -105,7 +104,7 @@ td,th{
 	}
 section a{text-decoration: none;
 	text-decoration: none;
-	margin-left: 57px;}
+/*margin-left: 57px;*/}
 
 	#logo-header .site-name {
 		display: block;
@@ -174,8 +173,8 @@ margin-left: 8px;
 					display: none;
 					list-style: none;
 					background: rgb(136, 136, 136);
-					position: absolute;
-					left: 50%;
+					position: relative;
+					left: 20%;
 					top: 0;
 					padding: 0;
 					border:  #28a735 solid 1px;
@@ -183,6 +182,7 @@ margin-left: 8px;
 
 				nav ul ul li {
 					font-size: 14px;
+					border-top: #28a735 solid 1px;
 				}
 
 
@@ -229,10 +229,10 @@ height: 40px
 			font-family:serif;
 	}
 
-	.formulario div h2{
+h2{
+		font-family:serif;
 		color:#2C538D;
-		margin-bottom: 10%;
-
+		margin-bottom: 5%;
 		font-size: 45px;
 	}
 
@@ -266,8 +266,7 @@ height: 40px
 	* listado_usuario
 	*/
 	#listado_usuario {
-	    	display: inline-block;
-				min-height: 500px;
+	    	height: 375px;
 	    }
 	#listado_usuario a {
 		text-decoration: none;
@@ -337,8 +336,4 @@ height: 40px
 	}
 	#listado_candidatos a:hover {
 		color: rgb(32, 255, 34);
-	}
-
-	.añadir_usuario{
-		height: 380px;
 	}

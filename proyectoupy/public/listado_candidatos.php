@@ -18,8 +18,6 @@
   <body>
     <?php include "./assets/navegadoradmin.php"; ?>
     <section id="listado_candidatos">
-            <a href="eliminar_candidato.php"><th>Eliminar candidato</th></a>
-            <a href="addcandidato.php"><th>añadir candidato</th></a>
       <table whidt='2000px' border='1'>
         <tr>
           <th>Nº Candidato</th>

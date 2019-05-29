@@ -17,7 +17,7 @@
   <body>
     	<?php include "./assets/navegadoradmin.php"; ?>
       <section class="eliminar_usuario">
-        <h1>Eliminar Candidato</h1>
+        <h2>Eliminar Candidato</h2>
         <h3>Seleccionar Candidato</h3>
         <form class="select_delet" action="eliminar_candidato.php" method="post" required>
           <label for="Descripcion"><strong>Candidato:</strong></label><select class="Candidato" name="Candidato" id="Candidato" style="margin-left: 20px; margin-top: 10px;">
@@ -31,7 +31,7 @@
              ?>
           </select>
           <br></br>
-          <input id="deletcandidato"  type="submit" value="Eliminar"></input>
+          <input id="update_perfil"  type="submit" value="Eliminar"></input>
         </form>
       </section>
   </body>

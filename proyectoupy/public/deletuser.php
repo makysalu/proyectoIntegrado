@@ -16,11 +16,11 @@
   </head>
   <body>
     	<?php include "./assets/navegadoradmin.php"; ?>
-      <section class="eliminar_usuario">
-        <h1>Eliminar Usuario</h1>
+      <section class="formulario">
+        <div><h2>Eliminar Usuario</h2></div>
         <h3>Seleccionar Usuario</h3>
         <form class="select_delet" action="eliminar_usuario.php" method="post" required>
-          <select class="User" name="User" id="User" style="margin-left: 20px; margin-top: 10px;">
+          <label for="afiliado"><strong>Afiliado:</strong></label><select class="User" name="User" id="User" style="margin-left: 20px; margin-top: 10px;">
             <?php
               foreach ($resultado as $usuario) {
                 $id=$usuario["ID_usuario"];
@@ -31,7 +31,7 @@
              ?>
           </select>
           <br></br>
-          <input id="deletuser"  type="submit" value="Eliminar"></input>
+          <input id="update_perfil"  type="submit" value="Eliminar"></input>
         </form>
       </section>
   </body>

@@ -35,7 +35,7 @@
             if($error!=""){echo "<h4>ERROR: $error</h4>";}
           }
         ?>
-        <h1>Añadir Candidato</h1>
+        <h2>Añadir Candidato</h2>
         <h3>Seleccionar Candidato</h3>
         <form class="select_delet" action="addcandidato.php" method="post" onsubmit="return AñadirCandidato()">
           <label for="Candidato"><strong>Candidato:</strong></label><select class="Candidato" name="Candidato" id="Candidato" style="margin-left: 20px; margin-top: 10px;">
@@ -51,9 +51,8 @@
           <h3>Añadir Descripcion</h3>
           <div><label for="Descripcion"><strong>Descripcion: </strong></label><input type="text" name="Descripcion" value="" value placeholder=" Descripcion" id="Descripcion" required></div>
           <br></br>
-          <input id="addcandidato"  type="submit" value="Añadir"></input>
+          <input id="update_perfil"  type="submit" value="Añadir"></input>
         </form>
       </section>
-      <?php include "./assets/piedepagina.php"; ?>
   </body>
 </html>
