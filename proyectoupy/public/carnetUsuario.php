@@ -23,10 +23,11 @@ session_start();
        <header>
          <div id="cabecerausuario">
            <div class="cabecerausuario" >
+             <img id="imagen" src="images/logo.jpeg" width="120" height="120"/>
            </div>
            <div class="cabecerausuario" id="cabeceraNsocio">
-               <span><strong>Fecha: </strong><?php echo $_SESSION["user"]['Fecha_Alta'] ?></span><br><br>
-               <span><strong>Nº Socio: </strong><?php echo $_SESSION["user"]['ID_usuario'] ?></span>
+               <span><strong>Fecha: </strong><?php echo $_SESSION["user"]['fecha_alta'] ?></span><br><br>
+               <span><strong>Nº Socio: </strong><?php echo $_SESSION["user"]['Id_usuario'] ?></span>
            </div>
            <div class="cabecerausuario">
              <p>
@@ -47,7 +48,7 @@ session_start();
          </header>
          <div id="carnetderecha">
            <div id="fotocarnet">
-             <img src=<?php echo "./images/fotoUsuario/".$_SESSION['user']['Foto']; ?> width="240" height="300"/>
+             <img src="images/user.jpg" width="240" height="300"/>
            </div>
          </div>
          <div id="carnetizquierda">
@@ -57,9 +58,9 @@ session_start();
            </div>
            <div id="datoscarnet">
              <span><strong>Carnet de Afiliado</strong></span><br>
-             <span><?php echo $_SESSION['user']['Nombre']; echo "&nbsp"; echo $_SESSION['user']['Apellidos'] ?></span><br>
-             <span><?php echo $_SESSION["user"]['DNI'] ?></span><br>
-             <span><?php echo $_SESSION["user"]['Ciudad'] ?></span>
+             <span><?php echo $_SESSION['user']['nombre']; echo "&nbsp"; echo $_SESSION['user']['apellidos'] ?></span><br>
+             <span><?php echo $_SESSION["user"]['dni'] ?></span><br>
+             <span><?php echo $_SESSION["user"]['ciudad'] ?></span>
            </div>
          </div>
        </article>

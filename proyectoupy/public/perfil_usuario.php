@@ -12,15 +12,15 @@
           $error=$u->actualizarPerfil($_POST);
           if ($error==false){
                 $_SESSION["user"]['Id_usuario']=$u->getId_Afiliado();
-                $_SESSION["user"]['Nombre']=$u->getNombre();
-                $_SESSION["user"]['Apellidos']=$u->getApellidos();
-                $_SESSION["user"]['DNI']=$u->getDNI();
-                $_SESSION["user"]['Fecha']=$u->getFecha();
-                $_SESSION["user"]['Fecha_Alta']=$u->getFecha_Alta();
-                $_SESSION["user"]['Foto']=$u->getFoto();
-                $_SESSION["user"]['Ciudad']=$u->getCiudad();
-                $_SESSION["user"]['Email']=$u->getEmail();
-                $_SESSION["user"]['Cuota']=$u->getCuota();
+                $_SESSION["user"]['nombre']=$u->getNombre();
+                $_SESSION["user"]['apellidos']=$u->getApellidos();
+                $_SESSION["user"]['dni']=$u->getDNI();
+                $_SESSION["user"]['fecha_nacimiento']=$u->getFecha_Nacimiento();
+                $_SESSION["user"]['fecha_alta']=$u->getFecha_Alta();
+                $_SESSION["user"]['foto']=$u->getFoto();
+                $_SESSION["user"]['ciudad']=$u->getCiudad();
+                $_SESSION["user"]['email']=$u->getEmail();
+                $_SESSION["user"]['cuota']=$u->getCuota();
 
               header("Location:perfil_usuario.php");
           }
@@ -43,7 +43,7 @@
 <div class="fondoColor"></div>
 <div class="fondoPerfil"><img id="sectionImagen" src="./images/fondoPerfil.jpg"/></div>
 <div id="textoIndex">
-  <h1 id="tituloPagina">Perfil afiliado</h1>
+  <h1 id="tituloPagina">Perfil Afiliado</h1>
 </div>
      <section id="fichausuario">
        <?php
@@ -52,7 +52,7 @@
        }
        ?>
        <header>
-         <h1>FICHA DE <?php echo strtoupper($_SESSION["user"]['Nombre']); ?></h1>
+         <h1>FICHA DE <?php echo strtoupper($_SESSION["user"]['nombre']); ?></h1>
         <!-- <div id="cabecerausuario">
            <div class="cabecerausuario" >
              <img id="imagen" src="images/logo.jpg" width="120" height="120"/>
@@ -75,13 +75,13 @@
        <article class="perfil">
          <div>
            <form class="formularioregistro" action="perfil_usuario.php" method="post" onsubmit="return comprobarPerfil()">
-             <div class="label_perfil"><label for="nombre"><strong>Nombre: </strong></label></div><input type="text" name="Nombre" value="<?php echo $_SESSION["user"]['Nombre'] ?>" value placeholder=" Nombre" id="Nombre" required><br></br>
-             <div class="label_perfil"><label for="apellidos"><strong>Apellidos: </strong></label></div><input type="text" name="Apellidos" value="<?php echo $_SESSION["user"]['Apellidos'] ?>" value placeholder=" Apellidos" id="Apellidos" required><br></br>
-             <div class="label_perfil"><label for="dni"><strong>DNI: </strong></label></div><input type="text" value="<?php echo $_SESSION["user"]['DNI'] ?> " value placeholder="" id="DNI" required readonly><br></br>
-             <div class="label_perfil"><label for="Cuota"><strong>Cuota: </strong></label></div><input type="text" name="Cuota" value placeholder="<?php echo $_SESSION["user"]['Cuota'] ?>" id="Cuota" required readonly><br></br>
-             <div class="label_perfil"><label for="Fecha"><strong>Fecha de Nacimiento: </strong></label></div><input type="date" name="Fecha" value="<?php echo $_SESSION["user"]['Fecha'] ?>" value placeholder=" Fecha" id="Fecha" required><br></br>
-             <div class="label_perfil"><label for="ciudad"><strong>Ciudad: </strong></label></div><input type="text" name="Ciudad" value="<?php echo $_SESSION["user"]['Ciudad'] ?>" value placeholder=" Ciudad" id="Ciudad" required><br></br>
-             <div class="label_perfil"><label for="email"><strong>Email: </strong></label></div><input type="email" name="Email" value="<?php echo $_SESSION["user"]['Email'] ?>" value placeholder=" Correo electrónico" id="Email" required><br></br>
+             <div class="label_perfil"><label for="nombre"><strong>Nombre: </strong></label></div><input type="text" name="Nombre" value="<?php echo $_SESSION["user"]['nombre'] ?>" value placeholder=" Nombre" id="Nombre" required><br></br>
+             <div class="label_perfil"><label for="apellidos"><strong>Apellidos: </strong></label></div><input type="text" name="Apellidos" value="<?php echo $_SESSION["user"]['apellidos'] ?>" value placeholder=" Apellidos" id="Apellidos" required><br></br>
+             <div class="label_perfil"><label for="dni"><strong>DNI: </strong></label></div><input type="text" name="DNI" value="<?php echo $_SESSION["user"]['dni'] ?>" value placeholder=" DNI" id="DNI" required readonly><br></br>
+             <div class="label_perfil"><label for="Cuota"><strong>Cuota: </strong></label></div><input type="number" name="Cuota" value="<?php echo $_SESSION["user"]['cuota'] ?>" value placeholder=" Cuota" id="Cuota" required readonly><br></br>
+             <div class="label_perfil"><label for="Fecha"><strong>Fecha de Nacimiento: </strong></label></div><input type="date" name="Fecha" value="<?php echo $_SESSION["user"]['fecha_nacimiento'] ?>" value placeholder=" Fecha" id="Fecha" required><br></br>
+             <div class="label_perfil"><label for="ciudad"><strong>Ciudad: </strong></label></div><input type="text" name="Ciudad" value="<?php echo $_SESSION["user"]['ciudad'] ?>" value placeholder=" Ciudad" id="Ciudad" required><br></br>
+             <div class="label_perfil"><label for="email"><strong>Email: </strong></label></div><input type="email" name="Email" value="<?php echo $_SESSION["user"]['email'] ?>" value placeholder=" Correo electrónico" id="Email" required><br></br>
              <span id="update_perfil"><input  type="submit" value="Actualizar"></span>
            </form>
          </div>

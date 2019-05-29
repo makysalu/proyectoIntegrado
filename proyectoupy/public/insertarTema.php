@@ -36,7 +36,7 @@
         <?php
         foreach ($listaTema as $Tema) {
             echo "<tr>";
-            echo "<td>".$Tema['Tema']."</td>";
+            echo "<td>".$Tema['tema']."</td>";
             echo "<td>".$Tema['Fecha_Publicacion']."</td>";
             echo "</div>";
         }

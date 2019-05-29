@@ -1,6 +1,6 @@
 <?php session_start();
   require "./../src/BBDD.php";
-  require "./../src/Noticias.php";
+  require "./../src/noticias.php";
   $a = new Noticias();
   $a->conexion();
   $listaNoticias=$a->mostrarNoticia();

@@ -1,7 +1,7 @@
 <?php
   session_start();
   require "./../src/BBDD.php";
-  require "./../src/Noticias.php";
+  require "./../src/noticias.php";
   $u = new Noticias();
   $u->conexion();
   $listarUltimasNoticias=$u->mostrarUltimasNoticias();
@@ -35,6 +35,7 @@ echo "<br>";
 echo "<p id='tituloNoticia'><label>".$ultimasNoticias['titulo']."</label></p>";
 echo "<p id='descrpcionNoticiaIndex'><label>".utf8_decode($ultimasNoticias['descripcion'])."</label></p>";
 echo "</div>";
+
 } ?>
 
     </section>

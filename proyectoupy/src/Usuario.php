@@ -6,7 +6,7 @@ class Usuario extends BBDD {
   private $dni;
   private $nombre;
   private $apellidos;
-  private $Fecha;
+  private $Fecha_nacimiento;
   private $ciudad;
   private $email;
   private $contrasena;
@@ -64,12 +64,12 @@ class Usuario extends BBDD {
     return $this->apellidos;
   }
 
-  /* Fecha */
-  function setFecha($fecha){
-    $this->fecha=$fecha;
+  /* Fecha_Nacimiento */
+  function setFecha_Nacimiento($fecha_nacimiento){
+    $this->fecha_nacimiento=$fecha_nacimiento;
   }
-  function getFecha(){
-    return $this->Fecha;
+  function getFecha_Nacimiento(){
+    return $this->fecha_nacimiento;
   }
 
   /* Ciudad */
@@ -107,7 +107,7 @@ class Usuario extends BBDD {
   // Diego Moreno -> Insertar Afiliado //
   public function comprobarCampos($pos){
     $error=null;
-    if (!isset($pos["Nombre"])||!isset($pos["Apellidos"])||!isset($pos["Fecha"])||!isset($pos["Ciudad"])||!isset($pos["Email"])||!isset($pos["Contrasena"])||!isset($pos["Contrasena2"])) {
+    if (!isset($pos)||!isset($pos["Nombre"])||!isset($pos["Apellidos"])||!isset($pos["Fecha"])||!isset($pos["Ciudad"])||!isset($pos["Email"])||!isset($pos["Contrasena"])||!isset($pos["Contrasena2"])) {
         $error = "";
       }elseif (!isset($pos["DNI"])){
         $error= "";
@@ -129,7 +129,9 @@ class Usuario extends BBDD {
       elseif ($pos["Contrasena2"] == "") {
         $error = "Vuelve a introducir la Contraseña";
       }
-
+      elseif ($pos["Contrasena2"] != $pos["Contrasena"]) {
+        $error = "Las contraseñas no coinciden";
+      }
       elseif (!isset($pos['type'])){
         $this->cuota=0;
         $error="No as introducido la cuota";
@@ -185,8 +187,8 @@ class Usuario extends BBDD {
       $error="Ya existe un Afiliado con ese DNI";
     }
     else{
-      $consulta="insert into usuario (Nombre, Apellidos, DNI, Fecha_Alta, Fecha, Ciudad, Email, Contrasena, Foto, Cuota) values ('".$pos['Nombre']."', '".$pos['Apellidos']."','".$pos['DNI']."',now() ,'".$pos['Fecha']."', '".$pos['Ciudad']."', '".$pos['Email']."', '".$pos['Contrasena']."','".$_FILES['uploadedfile']['name']."','.$this->cuota.')";
-
+      $consulta="insert into usuario (Nombre, Apellidos, DNI, Fecha_alta, Fecha, Ciudad, Email, Contrasena, Cuota)
+                  values ('".$pos['Nombre']."', '".$pos['Apellidos']."','".$pos['DNI']."',now() ,'".$pos['Fecha']."', '".$pos['Ciudad']."', '".$pos['Email']."', '".$pos['Contrasena']."','.$this->cuota.')";
       $this->conexion->query($consulta);
       $error=false;
     }
@@ -198,7 +200,7 @@ class Usuario extends BBDD {
   // Diego Moreno -> loguear Afiliado
   public function comprobarCamposlogin($pos){
     $error=null;
-    if (!isset($pos["DNI"])||!isset($pos["Contrasena"])){
+    if (!isset($pos)||!isset($pos["DNI"])||!isset($pos["Contrasena"])){
       $error = "";
     }elseif ($pos["DNI"] == "") {
       $error = "No has introducido tu DNI.";
@@ -235,7 +237,7 @@ class Usuario extends BBDD {
         $this->nombre=$usuario['Nombre'];
         $this->apellidos=$usuario['Apellidos'];
         $this->dni=$usuario['DNI'];
-        $this->Fecha=$usuario['Fecha'];
+        $this->fecha_nacimiento=$usuario['Fecha'];
         $this->fecha_alta=$usuario['Fecha_Alta'];
         $this->foto=$usuario['Foto'];
         $this->ciudad=$usuario['Ciudad'];
@@ -287,7 +289,7 @@ public function actualizarPerfil($pos){
     $this->nombre=$usuario['Nombre'];
     $this->apellidos=$usuario['Apellidos'];
     $this->dni=$usuario['DNI'];
-    $this->Fecha=$usuario['Fecha'];
+    $this->fecha_nacimiento=$usuario['Fecha'];
     $this->fecha_alta=$usuario['Fecha_Alta'];
     //$this->foto=$usuario['Foto'];
     $this->ciudad=$usuario['Ciudad'];
@@ -324,14 +326,13 @@ public function actualizarPerfil($pos){
       $this->nombre=$usuario['Nombre'];
       $this->apellidos=$usuario['Apellidos'];
       $this->dni=$usuario['DNI'];
-      $this->Fecha=$usuario['Fecha'];
+      $this->fecha_nacimiento=$usuario['Fecha'];
       $this->fecha_alta=$usuario['Fecha_Alta'];
-      $this->foto=$usuario['Foto'];
+      //$this->foto=$usuario['Foto'];
       $this->ciudad=$usuario['Ciudad'];
       $this->email=$usuario['Email'];
       $this->cuota=$usuario['Cuota'];
     }
-    return $resultado;
   }
 
   public function añadirFoto(){

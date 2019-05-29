@@ -13,7 +13,6 @@
   <body>
     <?php include "./assets/navegadoradmin.php"; ?>
     <section id="listado_usuario">
-      <a href="eliminar_usuario.php"><p>Eliminar usuario</p></a>
       <table whidt='2000px' border='1'>
         <tr>
           <th>DNI</th>
